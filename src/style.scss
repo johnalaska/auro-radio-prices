@@ -182,6 +182,11 @@
   }
 }
 
+.rdoLabelPrice {
+  color: #006abc;  // TODO (replace literal with a constant)
+  font-size: smaller; 
+}
+
 .slotContent {
   display: block;
   margin-left: var(--ds-size-400, $ds-size-400);

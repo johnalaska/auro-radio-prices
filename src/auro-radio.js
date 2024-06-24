@@ -70,6 +70,7 @@ export class AuroRadio extends LitElement {
       id:       { type: String },
       label:    { type: String },
       name:     { type: String },
+      price:    { type: String },
       value:    { type: String },
       tabIndex: {
         type: Number,
@@ -201,6 +202,10 @@ export class AuroRadio extends LitElement {
       'errorBorder': this.error
     };
 
+    const priceClasses = {
+      'rdoLabelPrice': true,
+    };
+
     return html`
       <div class="ods-inputGroup rdoGroup">
         <input
@@ -221,6 +226,7 @@ export class AuroRadio extends LitElement {
 
         <label for="${ifDefined(this.id)}" class="${classMap(labelClasses)}">
           <slot>${this.label}</slot>
+          <span class="${classMap(priceClasses)}">${this.price}</span>
         </label>
 
       </div>
